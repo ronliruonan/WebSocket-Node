@@ -1,8 +1,8 @@
 W3CWebSocket
 ============
 
-* [Constructor](#constructor)
-* [Limitations](#limitations)
+* [构造函数](#构造函数)
+* [限制](#限制)
 
 `var W3CWebSocket = require('websocket').w3cwebsocket`
 
@@ -42,9 +42,9 @@ new W3CWebSocket(requestUrl, requestedProtocols, [[[[origin], headers], requestO
 当运行浏览器的时候(for example by using [browserify](http://browserify.org/))，浏览器的本地 `WebSocket` 实现将被使用, 然后就是第一个和第二个参数(`requestUrl` and `requestedProtocols`)被使用 (those allowed by the *W3C WebSocket API*).
 
 
-Limitations
+限制
 -----------
 
-* `bufferedAmount` attribute is always 0.
-* `binaryType` is "arraybuffer" by default given that "blob" is not supported (Node does not implement the `Blob` class).
-* `send()` method allows arguments of type `DOMString`, `ArrayBuffer`, `ArrayBufferView` (`Int8Array`, etc) or Node `Buffer`, but does not allow `Blob`.
+* `bufferedAmount` 属性值总是0.
+* `binaryType` 是"arraybuffer"给的默认值，“blob”不支持(Node 没有实现 the `Blob` class).
+* `send()` 允许的参数类型 `DOMString`, `ArrayBuffer`, `ArrayBufferView` (`Int8Array`, 等等) or Node `Buffer`, 但不允许 `Blob`.
