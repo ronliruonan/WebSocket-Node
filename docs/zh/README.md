@@ -1,4 +1,4 @@
-Node环境下，WebSocket Client & WebSocket Server 的实现
+Node: WebSocket Client & Server 的实现
 =================================================
 
 中文译文，如有异议，随时交流。
