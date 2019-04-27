@@ -1,9 +1,9 @@
-Node环境中，WebSocket Client实现 & WebSocket Server实现
+Node环境下，WebSocket Client & WebSocket Server 的实现
 =================================================
 
 中文译文，如有异议，随时交流。
+
 在原版发生变化后，此文章不确保能够及时更新。
-[最新原始版地址](/master/README.md)
 
 概览
 --------
@@ -19,15 +19,6 @@ Node环境中，WebSocket Client实现 & WebSocket Server实现
 
 *(原文）For a WebSocket client written in ActionScript 3, see my [AS3WebScocket](https://github.com/theturtle32/AS3WebSocket) project.*
 
-
-文档
-=============
-
-[完整API的 原始英文 文档在 docs/en 文件夹中](docs/en/index.md)
-
-[完整API的 中文译文 文档在 docs/zh 文件夹中](docs/zh/index.md)
-
-
 变更日志
 ---------
 
@@ -37,8 +28,6 @@ Node环境中，WebSocket Client实现 & WebSocket Server实现
 * *(原文）Allowing additional request `headers` to be specified in the `tlsOptions` config parameter for WebSocketClient. See pull request #323*
 * 解决有关 `new Buffer` 使用的否决警告
 * *(原文）Resolving deprecation warnings relating to usage of `new Buffer`*
-
-[查看完整的变更日志](CHANGELOG.md)
 
 浏览器支持
 ---------------
