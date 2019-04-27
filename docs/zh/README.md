@@ -69,9 +69,9 @@ Autobahn Test
 
 本地扩展是可选的，然而，WebSocket-Node 可以在扩展没有被编译的情况下运行。
 
-*A few users have reported difficulties building the native extensions without first manually installing node-gyp.  If you have trouble building the native extensions, make sure you've got a C++ compiler, and have done `npm install -g node-gyp` first.
+*A few users have reported difficulties building the native extensions without first manually installing node-gyp.  If you have trouble building the native extensions, make sure you've got a C++ compiler, and have done `npm install -g node-gyp` first.*
 
-Native extensions are optional, however, and WebSocket-Node will work even if the extensions cannot be compiled.*
+*Native extensions are optional, however, and WebSocket-Node will work even if the extensions cannot be compiled.*
 
 在项目根目录下 *(In your project root)* :c++
 
@@ -107,22 +107,35 @@ Current Features:
 -----------------
 - Licensed under the Apache License, Version 2.0
 - Protocol version "8" and "13" (Draft-08 through the final RFC) framing and handshake
-- 能够 处理/合并 接收到的碎片信息  *Can handle/aggregate received fragmented messages*
-- 能够碎片化输出信息  *Can fragment outgoing messages*
-- 路由能够通过不同的路径和协议组合来挂载多个应用 *Router to mount multiple applications to various path and protocol combinations*
-- TLS支持通过WebSocketClient的出站连接 *TLS supported for outbound connections via WebSocketClient*
-- TLS支持服务端连接（https.createServer 替代 http.createServer） *TLS supported for server connections (use https.createServer instead of http.createServer)*
+- 能够 处理/合并 接收到的碎片信息  
+- *Can handle/aggregate received fragmented messages*
+- 能够碎片化输出信息  
+- *Can fragment outgoing messages*
+- 路由能够通过不同的路径和协议组合来挂载多个应用 
+- *Router to mount multiple applications to various path and protocol combinations*
+- TLS支持通过WebSocketClient的出站连接 
+- *TLS supported for outbound connections via WebSocketClient*
+- TLS支持服务端连接（https.createServer 替代 http.createServer） 
+- *TLS supported for server connections (use https.createServer instead of http.createServer)*
   - Thanks to [pors](https://github.com/pors) for confirming(确认/确认检验) this!
-- 设置、解析Cookie *Cookie setting and parsing*
+- 设置、解析Cookie 
+- *Cookie setting and parsing*
 - 可调的设置  *Tunable settings*
-  - 最大可接收的帧大小  *Max Receivable Frame Size*
-  - 最大接收信息集合大小  *Max Aggregate ReceivedMessage Size*
-  - 是否碎片化输出信息  *Whether to fragment outgoing messages*
-  - 碎片化 大Size的输出信息  *Fragmentation chunk size for outgoing messages*
-  - 是否自动发送 ping 来维持keepalive  *Whether to automatically send ping frames for the purposes of keepalive*
+  - 最大可接收的帧大小  
+  - *Max Receivable Frame Size*
+  - 最大接收信息集合大小  
+  - *Max Aggregate ReceivedMessage Size*
+  - 是否碎片化输出信息  
+  - *Whether to fragment outgoing messages*
+  - 碎片化 大Size的输出信息  
+  - *Fragmentation chunk size for outgoing messages*
+  - 是否自动发送 ping 来维持keepalive  
+  - *Whether to automatically send ping frames for the purposes of keepalive*
   - Keep-alive ping interval
-  - 是否自动组装接收的碎片（允许应用直接处理单独的碎片） *Whether or not to automatically assemble received fragments (allows application to handle individual fragments directly)*
-  - 配置等待时长，在发出确认close帧后，需要等几时后再关闭socket *How long to wait after sending a close frame for acknowledgment before closing the socket.*
+  - 是否自动组装接收的碎片（允许应用直接处理单独的碎片） 
+  - *Whether or not to automatically assemble received fragments (allows application to handle individual fragments directly)*
+  - 配置等待时长，在发出确认close帧后，需要等几时后再关闭socket 
+  - *How long to wait after sending a close frame for acknowledgment before closing the socket.*
 - [W3C WebSocket API](http://www.w3.org/TR/websockets/) for applications running on both Node and browsers (via the `W3CWebSocket` class). 
 
 
@@ -255,7 +268,7 @@ Client 实例 使用了 *W3C WebSocket API*
 
 如同上面的实例，只是使用了 W3C WebSocket API
 
-Same example as above but using the [W3C WebSocket API](http://www.w3.org/TR/websockets/).
+*Same example as above but using the [W3C WebSocket API](http://www.w3.org/TR/websockets/).*
 
 ```javascript
 var W3CWebSocket = require('websocket').w3cwebsocket;
@@ -295,7 +308,7 @@ client.onmessage = function(e) {
 
 在 `test` 文件夹中，请看 `libwebsockets-test-server.js`
 
-For an example of using the request router, see `libwebsockets-test-server.js` in the `test` folder.
+*For an example of using the request router, see `libwebsockets-test-server.js` in the `test` folder.*
 
 
 Resources
