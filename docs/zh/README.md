@@ -43,23 +43,23 @@ Node: WebSocket Client & Server 的实现
 
 ***比6.0版本还老的Safari浏览器不支持，因为它使用了一个很古老的WebSockets草案***
 
-*(原文)Safari older than 6.0 is not supported since it uses a very old draft of WebSockets*
+*Safari older than 6.0 is not supported since it uses a very old draft of WebSockets*
 
 ***如果需要同时兼容传统基于draft-75/draft-76/draft-00实现的浏览器，可以参考一下这里: https://gist.github.com/1428579***
 
-*(原文)If you need to simultaneously support legacy browser versions that had implemented draft-75/draft-76/draft-00, take a look here: https://gist.github.com/1428579*
+*If you need to simultaneously support legacy browser versions that had implemented draft-75/draft-76/draft-00, take a look here: https://gist.github.com/1428579*
 
 标准（Benchmarks）
 ----------
 在Autobahn test suite有一些基本的基准部分。[基准页](http://theturtle32.github.com/WebSocket-Node/benchmarks/) 展示了运行在AutobahnServer 0.4.10, WebSocket-Node 1.0.2, WebSocket-Node 1.0.4, and ws 0.3.4的Autobahn测试结果.
 
-*（原文）There are some basic benchmarking sections in the Autobahn test suite.  I've put up a [benchmark page](http://theturtle32.github.com/WebSocket-Node/benchmarks/) that shows the results from the Autobahn tests run against AutobahnServer 0.4.10, WebSocket-Node 1.0.2, WebSocket-Node 1.0.4, and ws 0.3.4.*
+*There are some basic benchmarking sections in the Autobahn test suite.  I've put up a [benchmark page](http://theturtle32.github.com/WebSocket-Node/benchmarks/) that shows the results from the Autobahn tests run against AutobahnServer 0.4.10, WebSocket-Node 1.0.2, WebSocket-Node 1.0.4, and ws 0.3.4.*
 
 Autobahn Test
 --------------
 这个完善的Autobahn test suite经常被大多数WebSocket实现来测试规范的依从性和互操作性。
 
-*（原文）The very complete [Autobahn Test Suite](http://autobahn.ws/testsuite/) is used by most WebSocket implementations to test spec compliance and interoperability.*
+*The very complete [Autobahn Test Suite](http://autobahn.ws/testsuite/) is used by most WebSocket implementations to test spec compliance and interoperability.*
 
 - [查看服务端测试结果](http://theturtle32.github.com/WebSocket-Node/test-report/servers/)
 
@@ -69,7 +69,7 @@ Autobahn Test
 
 本地扩展是可选的，然而，WebSocket-Node 可以在扩展没有被编译的情况下运行。
 
-*（原文）A few users have reported difficulties building the native extensions without first manually installing node-gyp.  If you have trouble building the native extensions, make sure you've got a C++ compiler, and have done `npm install -g node-gyp` first.
+*A few users have reported difficulties building the native extensions without first manually installing node-gyp.  If you have trouble building the native extensions, make sure you've got a C++ compiler, and have done `npm install -g node-gyp` first.
 
 Native extensions are optional, however, and WebSocket-Node will work even if the extensions cannot be compiled.*
 
@@ -118,7 +118,7 @@ Current Features:
   - 最大可接收的帧大小  *Max Receivable Frame Size*
   - 最大接收信息集合大小  *Max Aggregate ReceivedMessage Size*
   - 是否碎片化输出信息  *Whether to fragment outgoing messages*
-  - 粉碎 大的输出信息  *Fragmentation chunk size for outgoing messages
+  - 碎片化 大Size的输出信息  *Fragmentation chunk size for outgoing messages*
   - 是否自动发送 ping 来维持keepalive  *Whether to automatically send ping frames for the purposes of keepalive*
   - Keep-alive ping interval
   - 是否自动组装接收的碎片（允许应用直接处理单独的碎片） *Whether or not to automatically assemble received fragments (allows application to handle individual fragments directly)*
@@ -139,7 +139,7 @@ Server 实例
 --------------
 
 简短的Server实例能够回应任何发送给它的信息，不论是utf-8 还是 binary格式
-*（原文）Here's a short example showing a server that echos back anything sent to it, whether utf-8 or binary.*
+*Here's a short example showing a server that echos back anything sent to it, whether utf-8 or binary.*
 
 ```javascript
 #!/usr/bin/env node
@@ -206,7 +206,7 @@ Client 实例
 
 下面简单的Client实例将会打印任何控制台收到的utf-8信息，定期发送随机数
 
-*（原文）This is a simple example client that will print out any utf-8 messages it receives on the console, and periodically sends a random number.*
+*This is a simple example client that will print out any utf-8 messages it receives on the console, and periodically sends a random number.*
 
 这是在Node运行的Client代码，不是在浏览器
 *This code demonstrates a client in Node.js, not in the browser*
