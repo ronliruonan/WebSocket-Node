@@ -9,15 +9,15 @@ Node: WebSocket Client & Server 的实现
 --------
 这是一个Node环境中，主要使用纯JavaScript实现的WebSocket（协议版本8、13）。
 
-*(原文）This is a (mostly) pure JavaScript implementation of the WebSocket protocol versions 8 and 13 for Node.*
+*This is a (mostly) pure JavaScript implementation of the WebSocket protocol versions 8 and 13 for Node.*
 
 在“test/scripts”文件夹中，有一些客户端和服务端的实例应用，它们使用了不同的互操作性测试协议。
 
-*(原文）There are some example client and server applications that implement various interoperability testing protocols in the "test/scripts" folder.*
+*There are some example client and server applications that implement various interoperability testing protocols in the "test/scripts" folder.*
 
 用ActionsScript 3 写的WebSocket客户端，项目 [AS3WebScocket](https://github.com/theturtle32/AS3WebSocket)。
 
-*(原文）For a WebSocket client written in ActionScript 3, see my [AS3WebScocket](https://github.com/theturtle32/AS3WebSocket) project.*
+*For a WebSocket client written in ActionScript 3, see my [AS3WebScocket](https://github.com/theturtle32/AS3WebSocket) project.*
 
 变更日志
 ---------
@@ -25,9 +25,9 @@ Node: WebSocket Client & Server 的实现
 ***当前版本: 1.0.27*** — 发布于 2018-09-19
 
 * 在WebSocketClient中，允许将额外请求 `headers` 添加到 `tlsOptions` 配置参数中。请看pull request #323
-* *(原文）Allowing additional request `headers` to be specified in the `tlsOptions` config parameter for WebSocketClient. See pull request #323*
+* *Allowing additional request `headers` to be specified in the `tlsOptions` config parameter for WebSocketClient. See pull request #323*
 * 解决有关 `new Buffer` 使用的否决警告
-* *(原文）Resolving deprecation warnings relating to usage of `new Buffer`*
+* *Resolving deprecation warnings relating to usage of `new Buffer`*
 
 浏览器支持
 ---------------
@@ -63,11 +63,9 @@ Autobahn Test
 
 - [查看服务端测试结果](http://theturtle32.github.com/WebSocket-Node/test-report/servers/)
 
-- *（原文）[View Server Test Results](http://theturtle32.github.com/WebSocket-Node/test-report/servers/)*
-
 安装
 ------------
-一些用户反馈说，在没有手动安装node-gyp的情况下，搭建本地扩展困难。如果在搭建本地扩展中遇到困难，确保你安装了c++编译器，并且第一步已经执行了`npm install -g node-gyp`命令。
+一些用户反馈，在没有手动安装node-gyp的情况下，搭建本地扩展困难。如果在搭建本地扩展中遇到困难，确保你安装了c++编译器，并且第一步已经执行了`npm install -g node-gyp`命令。
 
 本地扩展是可选的，然而，WebSocket-Node 可以在扩展没有被编译的情况下运行。
 
