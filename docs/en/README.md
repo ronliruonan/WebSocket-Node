@@ -21,7 +21,9 @@ For a WebSocket client written in ActionScript 3, see my [AS3WebScocket](https:/
 Documentation
 =============
 
-[You can read the full API documentation in the docs folder.](docs/index.md)
+[You can read the full API documentation in the docs folder.](docs/en/index.md)
+
+（中文译文）[所有API的参考在docs/zh文件夹中.](docs/zh/index.md)
 
 
 Changelog
