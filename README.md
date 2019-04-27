@@ -23,7 +23,7 @@ Documentation
 
 [You can read the full API documentation in the docs folder.](docs/en/index.md)
 
-（中文译文）[所有API的参考在docs/zh文件夹中.](docs/zh/README.md)
+（中文译文）[完整API文档的参考在docs/zh文件夹中.](docs/zh/README.md)
 
 
 Changelog
