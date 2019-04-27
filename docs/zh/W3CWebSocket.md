@@ -2,7 +2,7 @@ W3CWebSocket
 ============
 
 * [构造函数](#构造函数)
-* [限制](#限制)
+* [局限性](#局限性)
 
 `var W3CWebSocket = require('websocket').w3cwebsocket`
 
@@ -42,7 +42,7 @@ new W3CWebSocket(requestUrl, requestedProtocols, [[[[origin], headers], requestO
 当运行浏览器的时候(for example by using [browserify](http://browserify.org/))，浏览器的本地 `WebSocket` 实现将被使用, 然后就是第一个和第二个参数(`requestUrl` and `requestedProtocols`)被使用 (those allowed by the *W3C WebSocket API*).
 
 
-限制
+局限性
 -----------
 
 * `bufferedAmount` 属性值总是0.
