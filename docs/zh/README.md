@@ -19,6 +19,18 @@ Node: WebSocket Client & Server 的实现
 
 *For a WebSocket client written in ActionScript 3, see my [AS3WebScocket](https://github.com/theturtle32/AS3WebSocket) project.*
 
+参考文档
+--------
+WebSocket-Node 包含 client、server 的功能, 分别通过 WebSocketClient、WebSocketServer 来使用.  一旦连接被确认，发送和接收信息的API是完全一样的，不论是你是作为client 还是 server来运行。
+
+点击下面的class来查看对应的API文档：
+* [WebSocketClient](./WebSocketClient.md)
+* [WebSocketConnection](./WebSocketConnection.md)
+* [WebSocketFrame](./WebSocketFrame.md)
+* [WebSocketRequest](./WebSocketRequest.md)
+* [WebSocketServer](./WebSocketServer.md)
+* [W3CWebSocket](./W3CWebSocket.md)
+
 变更日志
 ---------
 

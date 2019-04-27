@@ -1,4 +1,4 @@
-WebSocketRequest
+WebSocketRequest 中文待更新
 ================
 
 * [Constructor](#constructor)

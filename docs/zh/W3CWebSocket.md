@@ -1,4 +1,4 @@
-W3CWebSocket
+W3CWebSocket 中文待更新
 ============
 
 * [Constructor](#constructor)
