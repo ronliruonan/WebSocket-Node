@@ -139,6 +139,7 @@ Server 实例
 --------------
 
 简短的Server实例能够回应任何发送给它的信息，不论是utf-8 还是 binary格式
+
 *Here's a short example showing a server that echos back anything sent to it, whether utf-8 or binary.*
 
 ```javascript
@@ -209,6 +210,7 @@ Client 实例
 *This is a simple example client that will print out any utf-8 messages it receives on the console, and periodically sends a random number.*
 
 这是在Node运行的Client代码，不是在浏览器
+
 *This code demonstrates a client in Node.js, not in the browser*
 
 ```javascript
@@ -248,10 +250,11 @@ client.on('connect', function(connection) {
 client.connect('ws://localhost:8080/', 'echo-protocol');
 ```
 
-Client 实例使用了 *W3C WebSocket API*
+Client 实例 使用了 *W3C WebSocket API*
 --------------------------------------------
 
 如同上面的实例，只是使用了 W3C WebSocket API
+
 Same example as above but using the [W3C WebSocket API](http://www.w3.org/TR/websockets/).
 
 ```javascript
@@ -291,6 +294,7 @@ client.onmessage = function(e) {
 ----------------------
 
 在 `test` 文件夹中，请看 `libwebsockets-test-server.js`
+
 For an example of using the request router, see `libwebsockets-test-server.js` in the `test` folder.
 
 
