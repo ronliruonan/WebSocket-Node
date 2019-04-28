@@ -43,7 +43,7 @@ new WebSocketServer([serverConfig]);
 
 *--> Gracefully closes all open WebSocket connections and unmounts the server from the Node http.Server instance.*
 
-Server Config Options
+配置项
 ---------------------
 **httpServer** - (http.Server 实例) **必需**.  
 
@@ -141,5 +141,5 @@ Emitted whenever a new WebSocket connection is accepted.
 `function(webSocketConnection, closeReason, description)`
 
 任何连接关闭将触发`close`事件，传递一个关闭的WebSocketConnection的实例引用。`closeReason`数字状态码，`description`文本描述。 
- 
+
 *--> Whenever a connection is closed for any reason, the WebSocketServer instance will emit a `close` event, passing a reference to the WebSocketConnection instance that was closed.  `closeReason` is the numeric reason status code for the connection closure, and `description` is a textual description of the close reason, if available.*
