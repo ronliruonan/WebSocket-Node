@@ -1,4 +1,4 @@
-Node: WebSocket Client & Server 的实现
+Node: WebSocket Client & Server 实现
 =================================================
 
 中文译文，如有异议，随时交流。
@@ -7,20 +7,17 @@ Node: WebSocket Client & Server 的实现
 
 概览
 --------
-这是一个Node环境中，主要使用纯JavaScript实现的WebSocket（协议版本8、13）。
+这是一个Node环境中，主要使用纯JavaScript的WebSocket（协议版本8、13）实现。  
+    *（原文）This is a (mostly) pure JavaScript implementation of the WebSocket protocol versions 8 and 13 for Node.*
 
-*This is a (mostly) pure JavaScript implementation of the WebSocket protocol versions 8 and 13 for Node.*
+在“test/scripts”文件夹中，有一些客户端和服务端的实例应用，它们使用了不同的互操作性测试协议。  
+    *（原文）There are some example client and server applications that implement various interoperability testing protocols in the "test/scripts" folder.*
 
-在“test/scripts”文件夹中，有一些客户端和服务端的实例应用，它们使用了不同的互操作性测试协议。
-
-*There are some example client and server applications that implement various interoperability testing protocols in the "test/scripts" folder.*
-
-用ActionsScript 3 写的WebSocket客户端，项目 [AS3WebScocket](https://github.com/theturtle32/AS3WebSocket)。
-
-*For a WebSocket client written in ActionScript 3, see my [AS3WebScocket](https://github.com/theturtle32/AS3WebSocket) project.*
+用ActionsScript 3 写的WebSocket客户端，项目 [AS3WebScocket](https://github.com/theturtle32/AS3WebSocket)。  
+    *（原文）For a WebSocket client written in ActionScript 3, see my [AS3WebScocket](https://github.com/theturtle32/AS3WebSocket) project.*
 
 参考文档
---------
+---------
 WebSocket-Node 包含 client、server 的功能, 分别通过 WebSocketClient、WebSocketServer 来使用.  一旦连接被确认，发送和接收信息的API是完全一样的，不论是你是作为client 还是 server来运行。
 
 点击下面的class来查看对应的API文档：
@@ -36,15 +33,15 @@ WebSocket-Node 包含 client、server 的功能, 分别通过 WebSocketClient、
 
 ***当前版本: 1.0.27*** — 发布于 2018-09-19
 
-* 在WebSocketClient中，允许将额外请求 `headers` 添加到 `tlsOptions` 配置参数中。请看pull request #323
-* *Allowing additional request `headers` to be specified in the `tlsOptions` config parameter for WebSocketClient. See pull request #323*
-* 解决有关 `new Buffer` 使用的否决警告
-* *Resolving deprecation warnings relating to usage of `new Buffer`*
+* 在WebSocketClient中，允许将额外请求 `headers` 添加到 `tlsOptions` 配置参数中。请看pull request #323  
+    *（原文）Allowing additional request `headers` to be specified in the `tlsOptions` config parameter for WebSocketClient. See pull request #323*
+* 解决有关 `new Buffer` 使用的否决警告  
+    *（原文）Resolving deprecation warnings relating to usage of `new Buffer`*
 
 浏览器支持
 ---------------
 目前所有的浏览器完全支持。
-*（原味）All current browsers are fully supported.*
+    *（原文）All current browsers are fully supported.*
 
 * Firefox 7-9 (Old) (Protocol Version 8)
 * Firefox 10+ (Protocol Version 13)
@@ -53,19 +50,16 @@ WebSocket-Node 包含 client、server 的功能, 分别通过 WebSocketClient、
 * Internet Explorer 10+ (Protocol Version 13)
 * Safari 6+ (Protocol Version 13)
 
-***比6.0版本还老的Safari浏览器不支持，因为它使用了一个很古老的WebSockets草案***
+***比6.0版本还老的Safari浏览器不支持，因为它使用了一个很古老的WebSockets草案***  
+    *（原文）Safari older than 6.0 is not supported since it uses a very old draft of WebSockets*
 
-*Safari older than 6.0 is not supported since it uses a very old draft of WebSockets*
+***如果需要同时兼容传统基于draft-75/draft-76/draft-00实现的浏览器，可以参考一下这里: https://gist.github.com/1428579***  
+    *（原文）If you need to simultaneously support legacy browser versions that had implemented draft-75/draft-76/draft-00, take a look here: https://gist.github.com/1428579*
 
-***如果需要同时兼容传统基于draft-75/draft-76/draft-00实现的浏览器，可以参考一下这里: https://gist.github.com/1428579***
-
-*If you need to simultaneously support legacy browser versions that had implemented draft-75/draft-76/draft-00, take a look here: https://gist.github.com/1428579*
-
-标准（Benchmarks）
+标准
 ----------
-在Autobahn test suite有一些基本的基准部分。[基准页](http://theturtle32.github.com/WebSocket-Node/benchmarks/) 展示了运行在AutobahnServer 0.4.10, WebSocket-Node 1.0.2, WebSocket-Node 1.0.4, and ws 0.3.4的Autobahn测试结果.
-
-*There are some basic benchmarking sections in the Autobahn test suite.  I've put up a [benchmark page](http://theturtle32.github.com/WebSocket-Node/benchmarks/) that shows the results from the Autobahn tests run against AutobahnServer 0.4.10, WebSocket-Node 1.0.2, WebSocket-Node 1.0.4, and ws 0.3.4.*
+在Autobahn test suite有一些基本的基准部分。[基准页](http://theturtle32.github.com/WebSocket-Node/benchmarks/) 展示了运行在AutobahnServer 0.4.10, WebSocket-Node 1.0.2, WebSocket-Node 1.0.4, and ws 0.3.4的Autobahn测试结果.  
+    *（原文）There are some basic benchmarking sections in the Autobahn test suite.  I've put up a [benchmark page](http://theturtle32.github.com/WebSocket-Node/benchmarks/) that shows the results from the Autobahn tests run against AutobahnServer 0.4.10, WebSocket-Node 1.0.2, WebSocket-Node 1.0.4, and ws 0.3.4.*
 
 Autobahn Test
 --------------
@@ -121,33 +115,46 @@ Current Features:
 - Protocol version "8" and "13" (Draft-08 through the final RFC) framing and handshake
 - 能够 处理/合并 接收到的碎片信息  
 - *Can handle/aggregate received fragmented messages*
+
 - 能够碎片化输出信息  
 - *Can fragment outgoing messages*
+
 - 路由能够通过不同的路径和协议组合来挂载多个应用 
 - *Router to mount multiple applications to various path and protocol combinations*
+
 - TLS支持通过WebSocketClient的出站连接 
 - *TLS supported for outbound connections via WebSocketClient*
+
 - TLS支持服务端连接（https.createServer 替代 http.createServer） 
 - *TLS supported for server connections (use https.createServer instead of http.createServer)*
   - Thanks to [pors](https://github.com/pors) for confirming(确认/确认检验) this!
+
 - 设置、解析Cookie 
 - *Cookie setting and parsing*
+
 - 可调的设置  *Tunable settings*
   - 最大可接收的帧大小  
   - *Max Receivable Frame Size*
+
   - 最大接收信息集合大小  
   - *Max Aggregate ReceivedMessage Size*
+
   - 是否碎片化输出信息  
   - *Whether to fragment outgoing messages*
+
   - 碎片化 大Size的输出信息  
   - *Fragmentation chunk size for outgoing messages*
+
   - 是否自动发送 ping 来维持keepalive  
   - *Whether to automatically send ping frames for the purposes of keepalive*
   - Keep-alive ping interval
+
   - 是否自动组装接收的碎片（允许应用直接处理单独的碎片） 
   - *Whether or not to automatically assemble received fragments (allows application to handle individual fragments directly)*
+
   - 配置等待时长，在发出确认close帧后，需要等几时后再关闭socket 
   - *How long to wait after sending a close frame for acknowledgment before closing the socket.*
+
 - [W3C WebSocket API](http://www.w3.org/TR/websockets/) for applications running on both Node and browsers (via the `W3CWebSocket` class). 
 
 
